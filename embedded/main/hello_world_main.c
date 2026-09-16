@@ -206,8 +206,8 @@ void camera_task(void *pvParameters) {
                 MQTT_TOPIC,
                 (const char *)fb->buf,
                 fb->len,
-                0,
-                0
+                0, // QoS = 0
+                0 // Retain = 0
             );
 
             if (msg_id < 0) {

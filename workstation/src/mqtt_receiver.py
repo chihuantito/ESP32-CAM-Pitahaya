@@ -45,4 +45,9 @@ class MQTTReceiver:
 
     def get_frame(self):
         with self.lock:
-            return self.latest_frame.copy() if self.latest_frame is not None else None
+            if self.latest_frame is None:
+                return None
+            
+            frame = self.latest_frame
+            self.latest_frame = None 
+            return frame
