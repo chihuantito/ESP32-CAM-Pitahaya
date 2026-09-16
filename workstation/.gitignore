@@ -1,0 +1,68 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments & Conda
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Machine Learning models & datasets (large binary files)
+models/*
+!models/.gitkeep
+*.pt
+*.pth
+*.onnx
+*.h5
+*.tflite
+*.engine
+# Uncomment if dataset images shouldn't be committed to Git:
+# dataset/
+
+# ESP32 / PlatformIO / ESP-IDF build outputs (if applicable)
+.pio/
+sdkconfig.old

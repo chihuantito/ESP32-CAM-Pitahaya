@@ -1,0 +1,26 @@
+# Open ESP-IDF Terminal
+-> idf.py add-dependency "espressif/esp32-camera"
+-> idf.py add-dependency "espressif/mqtt"
+
+# Add to sdkconfig
+-> CONFIG_SPIRAM=y
+# O ejecutando en Open ESP-IDF Terminal
+idf.py menuconfig
+    -> Component config 
+        -> ESP PSRAM y habilita Support for external, SPI-connected RAM 
+            -> con la opción Make RAM allocatable using heap_caps_malloc seleccionada.
+
+# Levanta el contenedor de mosquitto
+docker-compose up -d
+
+# Verifica que mosquitto esta ejecutandose
+docker logs mqtt_broker
+
+# Consumer
+docker exec -it mqtt_broker mosquitto_sub -h localhost -t "test/tema" -v
+
+# Publisher
+docker exec -it mqtt_broker mosquitto_pub -h localhost -t "test/tema" -m "Hola MQTT"
+
+# Clean topic
+docker exec -it mqtt_broker mosquitto_pub -h localhost -t "camara/frame" -n -r

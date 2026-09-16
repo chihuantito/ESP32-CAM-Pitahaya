@@ -1,0 +1,6 @@
+conda create -n espressif_idf python=3.12
+conda activate espressif_idf
+
+
+Dataset
+https://data.mendeley.com/datasets/cfchfdpfw5/1
