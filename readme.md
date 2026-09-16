@@ -1,4 +1,4 @@
-# 🐉 Clasificación de Pitahaya (ESP32-CAM + YOLO26 + MQTT)
+# 🐉 Clasificación de Pitahaya
 
 > Sistema IoT de visión por computadora diseñado para clasificar el estado de conservación de la pitahaya (*dragon fruit*) en tiempo real. Integra un **ESP32-CAM** para la captura y transmisión inalámbrica, un broker **MQTT**, y un modelo de inferencia **Ultralytics YOLO26**.
 
