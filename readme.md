@@ -35,10 +35,10 @@ El modelo de clasificación fue optimizado para identificar tres estados princip
 
 
 2. **Broker MQTT (Mosquitto)**
-* Actúa como intermediario ligero distribuyendo la transmisión binaria de fotogramas y los comandos de control con baja latencia.
+* Actúa como intermediario ligero, distribuyendo la transmisión de fotogramas y comandos de control con baja latencia.
 
 
 3. **Cliente Python (Recepción, Inferencia y Visualización)**
-* **Recepción y Decodificación Concurrente:** Consume el flujo continuo de imágenes (bytes JPEG) desde el broker MQTT sin bloquear el hilo principal.
+* **Recepción y Decodificación Concurrente:** Consume el flujo continuo de imágenes (bytes JPEG) desde el broker MQTT.
 * **Análisis por IA (YOLO26):** Ejecuta la inferencia en tiempo real sobre cada fotograma recibido para determinar el estado de la fruta y la latencia.
 * **Visualización:** Genera una interfaz gráfica que muestra el video de la cámara con un panel superpuesto (*overlay*) con las métricas y la predicción obtenida.
