@@ -11,18 +11,13 @@
 #include "mqtt_client.h"
 #include "esp_camera.h"
 #include "driver/gpio.h"
+#include "secrets.h"
 
 // ==================#
 // CONFIGURACIÓN     #
 // ==================#
 #define GPIO_FLASH_LED   4
 #define MQTT_TOPIC_LED   "camara/led"
-
-// #define WIFI_SSID       "Xiaomi_674E"
-// #define WIFI_PASS       "12345678"
-
-#define WIFI_SSID       "ZTE_2.4G_tUa575"
-#define WIFI_PASS       "CuzCax11!"
 
 #define MQTT_BROKER_URI "mqtt://192.168.1.2:1883"
 #define MQTT_TOPIC      "camara/frame"
